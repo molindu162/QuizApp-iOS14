@@ -13,6 +13,8 @@
 		4D21308E2A514D88004A8B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D21308C2A514D88004A8B3B /* Main.storyboard */; };
 		4D2130902A514D8A004A8B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D21308F2A514D8A004A8B3B /* Assets.xcassets */; };
 		4D2130932A514D8A004A8B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2130912A514D8A004A8B3B /* LaunchScreen.storyboard */; };
+		4D5393A42A518F7500B15691 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5393A32A518F7500B15691 /* Question.swift */; };
+		4D5393A62A518FBD00B15691 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5393A52A518FBD00B15691 /* QuizBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4D21308F2A514D8A004A8B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2130922A514D8A004A8B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2130942A514D8A004A8B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D5393A32A518F7500B15691 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		4D5393A52A518FBD00B15691 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		4D2130852A514D88004A8B3B /* QuizApp-iOS14 */ = {
 			isa = PBXGroup;
 			children = (
+				4D5393A22A518F4B00B15691 /* Model */,
+				4D5393A72A519AE200B15691 /* View */,
+				4D21309F2A515415004A8B3B /* Controller */,
 				4D2130862A514D88004A8B3B /* AppDelegate.swift */,
 				4D2130882A514D88004A8B3B /* SceneDelegate.swift */,
-				4D21308A2A514D88004A8B3B /* ViewController.swift */,
-				4D21308C2A514D88004A8B3B /* Main.storyboard */,
 				4D21308F2A514D8A004A8B3B /* Assets.xcassets */,
-				4D2130912A514D8A004A8B3B /* LaunchScreen.storyboard */,
 				4D2130942A514D8A004A8B3B /* Info.plist */,
 			);
 			path = "QuizApp-iOS14";
+			sourceTree = "<group>";
+		};
+		4D21309F2A515415004A8B3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D21308A2A514D88004A8B3B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4D5393A22A518F4B00B15691 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D5393A32A518F7500B15691 /* Question.swift */,
+				4D5393A52A518FBD00B15691 /* QuizBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D5393A72A519AE200B15691 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D21308C2A514D88004A8B3B /* Main.storyboard */,
+				4D2130912A514D8A004A8B3B /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5393A62A518FBD00B15691 /* QuizBrain.swift in Sources */,
 				4D21308B2A514D88004A8B3B /* ViewController.swift in Sources */,
+				4D5393A42A518F7500B15691 /* Question.swift in Sources */,
 				4D2130872A514D88004A8B3B /* AppDelegate.swift in Sources */,
 				4D2130892A514D88004A8B3B /* SceneDelegate.swift in Sources */,
 			);
@@ -290,6 +322,7 @@
 				DEVELOPMENT_TEAM = X4Y686LX78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QuizApp-iOS14/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -300,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.molindu.QuizApp-iOS14";
+				PRODUCT_BUNDLE_IDENTIFIER = "com-molindu.QuizApp-iOS14";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,6 +351,7 @@
 				DEVELOPMENT_TEAM = X4Y686LX78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QuizApp-iOS14/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.molindu.QuizApp-iOS14";
+				PRODUCT_BUNDLE_IDENTIFIER = "com-molindu.QuizApp-iOS14";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
